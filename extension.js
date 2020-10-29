@@ -164,9 +164,9 @@ function activate(context) {
           loaded = true;
           sessionTempFile = tempFilePath;
           if (isWindows) {
-            cmd = "type " + sessionTempFile + " | jshell --feedback normal";
+            cmd = "type " + sessionTempFile + " | jshell --enable-preview --feedback normal";
           } else {
-            cmd = "cat " + sessionTempFile + " | jshell --feedback normal"; // Discontinued
+            cmd = "cat " + sessionTempFile + " | jshell --enable-preview --feedback normal"; // Discontinued
           }
         });
       }
